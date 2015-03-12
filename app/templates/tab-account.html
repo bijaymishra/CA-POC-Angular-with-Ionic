@@ -1,0 +1,13 @@
+<ion-view view-title="Promotions">
+  <ion-content>
+
+    <div class="list">
+
+  <a class="item item-icon-right" href="#" ng-repeat="store in store.storedetails" href="#/tab/account/{{account.id}}">
+    <img style="float:left;" height="50px" ng-src="{{store.imageURL}}" /><div class="description">{{store.description}} </div>
+	
+	<i class="icon ion-chevron-right"></i>
+  </a>
+</div>
+  </ion-content>
+</ion-view>

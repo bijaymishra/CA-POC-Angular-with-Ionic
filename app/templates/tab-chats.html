@@ -1,0 +1,30 @@
+<ion-view view-title="Products">
+  <ion-content>
+  <label class="item item-input">
+  <i class="icon ion-search placeholder-icon"></i>
+  <input type="search" placeholder="Search">
+</label>
+   
+   
+	  <ion-list>
+        <div ng-repeat="store in store.storedetails">
+          <ion-item class="item-stable"
+                    ng-click="toggleGroup(store)"
+                    ng-class="{active: isGroupShown(store)}">
+              <i class="icon" ng-class="isGroupShown(store) ? 'ion-minus' : 'ion-plus'"></i>
+            
+             {{store.description}}
+          </ion-item>
+         <ion-item class="item-accordion"
+                    ng-repeat="store in store.storedetails"
+                    ng-show="isGroupShown(store)">
+            {{store.barcode}}
+          </ion-item>
+        </div>
+      </ion-list>
+	  
+
+
+	
+  </ion-content>
+</ion-view>

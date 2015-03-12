@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link href="styles/style.css" rel="stylesheet">
+	<title>Cash America</title>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="styles/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <!-- build:js scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/configuration.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body ng-app="starter"  ng-controller="DashCtrl">
+   
+  <ion-view view-title="Login" name="login-view" class="login-wrapper">
+  <ion-content class="padding">
+  
+  
+	<div class="signup-page" ng-hide="signupshow" ng-show="initialshow">
+		<div class="logo-login"><img alt="CashAmerica" src="../app/images/logo.png"></div>
+		<p class="details">Find stores and unique merchandise near you</p>
+		<button class="button button-block button-positive button-facebook" ng-click="facebooksignupblock();"><img class="facebook-image" src="images/icon-fb.png" alt="Facebook" />Connect to Facebook</button>
+		<div class="box-row">
+		<div class="col"><span class="line"></span></div>
+		<div class="col-60 login-seperator-text">or</div>
+		<div class="col"><span class="line"></span></div>
+		</div>
+		<button class="button button-block button-calm button-signup" ng-click="signup();">Sign Up</button>
+		<p>
+		<a class="details" ng-click="signupp();">Sign In</a>
+		</p>
+		</div>
+	
+	  <div class="SignUp" ng-hide="signuphide" ng-show="signinshow">
+	  <div class="logo-login"><img alt="CashAmerica" src="../app/images/logo-cashamerica.png"></div>
+	  <p class="details">
+	  Sign In
+	  </p>
+	  <p>
+	  <form name="signinform">
+	  <label class="item item-input">
+	  <img src="../app/images/email-icon.png" />
+			<input type="email" placeholder="Email Address" name="input" ng-model="email.text" required>
+    
+	</label>
+	<span class="error" ng-show="signinform.input.$error.email">
+      Not valid email!</span>
+	<button class="button button-block button-calm" ng-click="dash()" ng-disabled="signinform.$invalid">Sign In</button>
+	</form>
+	  </p>
+	   <div class="box-row">
+      <div class="col"><span class="line"></span></div>
+      <div class="col-60 login-seperator-text">or</div>
+      <div class="col"><span class="line"></span></div>
+    </div>
+		<button class="button button-block button-calm button-facebook"><img class="facebook-image" src="images/icon-fb.png" alt="Facebook" />Connect to Facebook</button>
+      <button class="button button-block button-calm button-signup" ng-click="signup();">Sign Up</button>
+	  
+	  <p>  
+	  </p>	  
+	  </div>
+	  <div class="" ng-show="signupshow" ng-hide="signuphide">  
+	  <div class="logo-login"><img alt="CashAmerica" src="../app/images/logo-cashamerica.png"></div>
+	  <p class="details">
+	  Sign Up
+	  </p>
+	  <form name="signupform">
+	  <div>
+	  <label class="item item-input">
+	  <img class="signup-images" src="../app/images/user-icon.png" />
+		<input type="text" placeholder="Full Name" name="input" ng-model="user.fullname" required>
+	  </label>
+	   <label class="item item-input">
+	   <img class="signup-images" src="../app/images/email-icon.png" />
+		<input type="text" placeholder="Email Address" ng-model="user.email" required>
+	  </label>
+	  <span class="error" ng-show="signupform.input.$error.email">
+      Not valid email!</span>
+	  <label class="item item-input">
+	  <img class="signup-images" src="../app/images/zip-icon.png" />
+		<input type="text" placeholder="ZipCode" ng-model="user.zipcode" required>
+	  </label>
+	  <label class="item item-input">
+	  <img class="signup-images" src="../app/images/age-icon.png" />
+		<input type="text" placeholder="Age(Optional)" ng-model="user.age">
+	  </label>
+	  <div class='gender-selection'>
+	  <ion-radio ng-model="user.male" ng-value="male"><img class="signup-images" src="../app/images/icon-male.png" />Male</ion-radio>
+	  </div>
+	  <div class='gender-selection'>
+	  
+	  		<ion-radio ng-model="user.female" ng-value="female"> <img  class="signup-images" src="../app/images/icon-female.png" />Female</ion-radio>
+	  </div>
+	  <label>
+	  <ion-toggle ng-model="user.emailsavings" class="white-space" toggle-class="toggle-calm">Sign up for email savings and updates</ion-toggle>
+	  </label>
+	  <label>
+	  <ion-toggle ng-model="pushNotification.checked" class="white-space" ng-change="push();" toggle-class="toggle-calm">Sign up for text message savings and updates</ion-toggle>
+	  </label>
+	  <label class="item item-input" ng-show="tel">Mobile
+		<div><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"></div>
+	  </label>
+	  </div>
+	  <div  class="details">
+	  By pressing continue you agree to our Terms and Privacy policy.
+	  </div>
+	  <div>
+	  <button class="button button-block button-calm details" ng-click="submitMyForm(user)" ng-disabled="signupform.$invalid">Continue</button>
+	  </div>
+ 
+	  </form> 
+	  </div>
+	  
+	  <div class="" ng-show="facebooksignup" ng-hide="facebooksigin">  
+	  <div class="logo-login"><img alt="CashAmerica" src="../app/images/logo-cashamerica.png"></div>
+	  <p>Hi Sarah </p>
+	  <form name="signupform">
+	  <div>
+	  <label class="item item-input">
+	  <img class="signup-images" src="../app/images/zip-icon.png" />
+		<input type="text" placeholder="ZipCode" ng-model="user.zipcode" required>
+	  </label>
+
+	  <label>
+	  <ion-toggle ng-model="emailsavings" toggle-class="toggle-calm">Sign up for email savings and updates</ion-toggle>
+	  </label>
+	  <label>
+	  <ion-toggle ng-model="textsavings" toggle-class="toggle-calm">Sign up for text message savings and updates</ion-toggle>
+	  </label>
+	  <label class="item item-input">Mobile
+		<div><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"></div>
+	  </label>
+	  </div>
+	  <div  class="details">
+	  By pressing continue you agree to our Terms and Privacy policy.
+	  </div>
+	  <div>
+	  <button class="button button-block button-calm details" ng-click="submitMyForm(user)" ng-disabled="signupform.$invalid">Continue</button>
+	  </div>
+ 
+	  </form> 
+	  </div>
+	  
+	</ion-content>
+	</ion-view>
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

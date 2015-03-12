@@ -1,0 +1,59 @@
+/* Empty. Add your own CSS if you like */
+.bar-header {background: #145ab4!important;}
+/*.cashamerica { background-image: url('../images/logo-cashamerica.png') no-repeat center;}*/
+.tab-nav {background: #145ab4!important;padding-top: 4px;}
+.title-center { color:#ffffff!important;}
+.ion-home,.ion-social-usd,.ion-location,.ion-android-promotion,.tab-title,.back-text { color:#ffffff!important;}
+.description { color: red; margin-left: 64px;}
+.login-wrapper {
+background: url("../images/bg-login.jpg");
+background-size: cover;
+}
+.facebook-image { width: 45px;position: relative;left: -40px;vertical-align: middle; }
+.login-seperator-text { color:#ffffff;}
+.logo-login img {max-width: 80%;}
+.logo-login {text-align: center;margin-top: 20px;margin-bottom: 30px;}
+.button-facebook{	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4d6aa4), color-stop(100%,#2b4582)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #4d6aa4 0%,#2b4582 100%); border:none;}
+.logo-login + p{padding: 0px 30px;margin-bottom: 20px;text-align: center;}
+.signup-page button{vertical-align: middle;}
+.signup-page p{text-align: center;}
+.signup-page p a{display: inline-block;margin-top: 30px; text-decoration: underline; cursor: pointer;}
+.button-signup { background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e40e4d), color-stop(100%,#cd001b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #e40e4d 0%,#cd001b 100%);
+margin-top: 20px !important;
+}
+input[type="email"]{
+	padding: 0px 5px;
+	font-size: 1em;
+}
+input[type="text"]{
+	padding: 5px 0 0;
+	font-size: 1em;
+}
+.gender-selection{
+	width: 50%;
+	float: left;
+}
+.gender-selection label .item-content{
+	padding-right: 0;
+}
+.manual-list a img {
+float: left;
+}
+.signup-images{margin-right: 5px;}
+.white-space{white-space: normal;}
+.white-space .toggle-calm{top:22px !important;}
+.button-signin{
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45a4df), color-stop(100%,#2886d0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #45a4df 0%,#2886d0 100%);
+border: 1px solid #4688B5 !important;
+margin-top: 50px !important;
+	}
+.box-row {padding: 5px 0;width: 100%;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
+.line {border-bottom: 1px solid #fff;display: block;margin-top: 5px;}
+.col{/* -webkit-box-flex: 1; */-moz-box-flex: 1;/* -webkit-flex: 1; */-ms-flex: 1;/* flex: 1; *//* display: block; *//* flex: 1 1 0; *//* padding: 5px; */width: 100%;
+}
+
+.details { color:#ffffff;}
+.signup-images{ width:20px;}
