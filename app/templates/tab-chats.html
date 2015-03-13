@@ -7,18 +7,18 @@
    
    
 	  <ion-list>
-        <div ng-repeat="store in store.storedetails">
+        <div ng-repeat="st in store.Category">
           <ion-item class="item-stable"
-                    ng-click="toggleGroup(store)"
-                    ng-class="{active: isGroupShown(store)}">
-              <i class="icon" ng-class="isGroupShown(store) ? 'ion-minus' : 'ion-plus'"></i>
+                    ng-click="toggleGroup(st)"
+                    ng-class="{active: isGroupShown(st)}">
+              <i class="icon" ng-class="isGroupShown(st) ? 'ion-minus' : 'ion-plus'"></i>
             
-             {{store.description}}
+             {{st.categoryName}}
           </ion-item>
          <ion-item class="item-accordion"
-                    ng-repeat="store in store.storedetails"
-                    ng-show="isGroupShown(store)">
-            {{store.barcode}}
+                    ng-repeat="item in st.items"
+                    ng-show="isGroupShown(st)">
+            {{item}}
           </ion-item>
         </div>
       </ion-list>

@@ -81,12 +81,11 @@ angular.module('starter.controllers', [])
     if ($scope.isGroupShown(store)) {
       $scope.shownGroup = null;
     } else {
-      $scope.shownGroup = store.barcode;
-	  $scope.expanditems = true;
-    }
+      $scope.shownGroup = store;
+	 }
   };
   $scope.isGroupShown = function(store) {
-    return $scope.shownGroup === store.barcode;
+    return $scope.shownGroup === store;
 	console.log($scope.shownGroup);
   };
 	
@@ -147,6 +146,8 @@ angular.module('starter.controllers', [])
 
   $http.get('data.json').success(function(stores) {
       $scope.store = stores;
+      console.log(stores);
+      
     });
 });
 
