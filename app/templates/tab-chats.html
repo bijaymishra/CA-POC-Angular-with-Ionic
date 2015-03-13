@@ -7,10 +7,11 @@
    
    
 	  <ion-list>
-        <div ng-repeat="st in store.Category |filter:searchItem">
+        <div ng-repeat="st in store.Category |filter:searchItem" ng-if="st.hasChildren == true">
           <ion-item class="item-stable"
                     ng-click="toggleGroup(st)"
                     ng-class="{active: isGroupShown(st)}">
+                    <img src='images/{{st.categoryCode}}.png' class="category-image" />
               <i class="icon rounded-icon" ng-class="isGroupShown(st) ? 'ion-minus' : 'ion-plus'"></i>
             
              {{st.categoryName}}
