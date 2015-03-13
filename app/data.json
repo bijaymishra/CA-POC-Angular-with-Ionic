@@ -97,155 +97,85 @@
     "categoryCode": "1000",
     "categoryName": "Jewelry",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "2000",
     "categoryName": "Tools",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "3000",
     "categoryName": "Electronics",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "4000",
     "categoryName": "Firearms",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "5000",
     "categoryName": "Cameras and Projectors",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "6000",
     "categoryName": "Musical Instruments",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "7000",
     "categoryName": "Sporting Goods",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "8000",
     "categoryName": "Home Goods",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "9300",
     "categoryName": "Clothes and Shoes",
     "parentID": "0",
-    "hasChildren": true,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": true
   },
   {
     "categoryCode": "9400",
     "categoryName": "Motor Vehicles",
     "parentID": "0",
-    "hasChildren": false,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": false
   },
   {
     "categoryCode": "9500",
     "categoryName": "Medical Equipment",
     "parentID": "0",
-    "hasChildren": false,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": false
   },
   {
     "categoryCode": "9700",
     "categoryName": "Bulk Coins & Bullion",
     "parentID": "0",
-    "hasChildren": false,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": false
   } ,
   {
     "categoryCode": "1100",
     "categoryName": "Pendants and Charms",
     "parentID": "1000",
-    "hasChildren": false,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": false
   },
   {
     "categoryCode": "1200",
     "categoryName": "Bracelets",
     "parentID": "1000",
-    "hasChildren": false,
-    "items": [
-            "0-0",
-            "0-1",
-            "0-2"
-        ]
+    "hasChildren": false
   }
 ]
 
