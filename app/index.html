@@ -48,18 +48,27 @@
   
   
 	<div class="signup-page" ng-hide="signupshow" ng-show="initialshow">
-		<div class="logo-login"><img alt="CashAmerica" src="../app/images/logo.png"></div>
-		<p class="details">Find stores and unique merchandise near you</p>
-		<button class="button button-block button-positive button-facebook" ng-click="facebooksignupblock();"><img class="facebook-image" src="images/icon-fb.png" alt="Facebook" />Connect to Facebook</button>
+		<header class="logo-login"><img src="images/logo.png" alt="CashAmerica"></header>
+		<p class="find-store">Find stores and unique merchandise near you</p>
+		<article class="loginform">
+				<div class="login-btn-row"> 
+				
+				
+				<button class="btn button-facebook btn-lg btn-block" ng-click="facebooksignupblock();"><span class="icon iconfb"><img alt="Facebook" src="images/icon-fb.png"></span>Connect to Facebook</button>
+				</div>
+		</article>
+		
 		<div class="box-row">
-		<div class="col"><span class="line"></span></div>
-		<div class="col-60 login-seperator-text">or</div>
-		<div class="col"><span class="line"></span></div>
+			<div class="col"><span class="line"></span></div>
+			<div class="col-60 login-seperator-text">or</div>
+			<div class="col"><span class="line"></span></div>
 		</div>
-		<button class="button button-block button-calm button-signup" ng-click="signup();">Sign Up</button>
-		<p>
-		<a class="details" ng-click="signupp();">Sign In</a>
-		</p>
+		<article class="loginform">
+			<button class="btn button-red btn-lg btn-block button-signup" ng-click="signup();">Sign Up</button>
+			<p>
+				<a class="details btn-link" ng-click="signupp();">Sign In</a>
+			</p>
+		</article>
 		</div>
 	
 	  <div class="SignUp" ng-hide="signuphide" ng-show="signinshow">
@@ -70,32 +79,39 @@
 	  <p>
 	  <form name="signinform">
 	  <label class="item item-input">
-	  <img src="../app/images/email-icon.png" />
+	  <img src="../app/images/email-icon.png" class="email-image" />
 			<input type="email" placeholder="Email Address" name="input" ng-model="email.text" required>
     
 	</label>
 	<span class="error" ng-show="signinform.input.$error.email">
       Not valid email!</span>
-	<button class="button button-block button-calm" ng-click="dash()" ng-disabled="signinform.$invalid">Sign In</button>
+	<button class="button button-block button-calm sign-in-button" ng-click="dash()" ng-disabled="signinform.$invalid">Sign In</button>
 	</form>
 	  </p>
-	   <div class="box-row">
+	 <div class="box-row">
       <div class="col"><span class="line"></span></div>
       <div class="col-60 login-seperator-text">or</div>
       <div class="col"><span class="line"></span></div>
     </div>
-		<button class="button button-block button-calm button-facebook"><img class="facebook-image" src="images/icon-fb.png" alt="Facebook" />Connect to Facebook</button>
-      <button class="button button-block button-calm button-signup" ng-click="signup();">Sign Up</button>
-	  
+
+		<div class="login-btn-row"> 
+
+		<button class="button button-block button-calm button-facebook"><span class="icon iconfb"><img alt="Facebook" src="images/icon-fb.png"></span>Connect to Facebook</button>
+		</div>
+	
+      	<button class="button button-block button-calm button-signup" ng-click="signup();">Sign Up</button>
+ 
 	  <p>  
 	  </p>	  
 	  </div>
-	  <div class="" ng-show="signupshow" ng-hide="signuphide">  
-	  <div class="logo-login"><img alt="CashAmerica" src="../app/images/logo-cashamerica.png"></div>
-	  <p class="details">
-	  Sign Up
-	  </p>
-	  <form name="signupform">
+	  <div class="signup-form-header" ng-show="signupshow" ng-hide="signuphide">  
+	  <header class="logo-signin">
+		<a href="javascript:history.back()" class="button-clear button back-button"></a>
+		<h1 class="title"><img class="logo" alt="CashAmerica" src="../app/images/logo-cashamerica.png"></h1>
+	  </header>
+	  <section class="content-wrapper signup-form">
+		<h2 class="page-title">Sign Up</h2>
+		<form name="signupform">
 	  <div>
 	  <label class="item item-input">
 	  <img class="signup-images" src="../app/images/user-icon.png" />
@@ -122,24 +138,31 @@
 	  
 	  		<ion-radio ng-model="user.female" ng-value="female"> <img  class="signup-images" src="../app/images/icon-female.png" />Female</ion-radio>
 	  </div>
-	  <label>
+	  <div>
 	  <ion-toggle ng-model="user.emailsavings" class="white-space" toggle-class="toggle-calm">Sign up for email savings and updates</ion-toggle>
-	  </label>
+	  </div>
 	  <label>
 	  <ion-toggle ng-model="pushNotification.checked" class="white-space" ng-change="push();" toggle-class="toggle-calm">Sign up for text message savings and updates</ion-toggle>
 	  </label>
-	  <label class="item item-input" ng-show="tel">Mobile
-		<div><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"></div>
+	  <label class="item item-input" ng-show="tel">
+	  	<div class="mobile-label"> Mobile </div>
+		<div class="mobile-input"><input class="mobile-input-bx" type="number" ng-model="telephone"><input class="mobile-input-bx" type="number" ng-model="telephone"><input class="mobile-input-bx" type="number" ng-model="telephone"></div>
 	  </label>
 	  </div>
-	  <div  class="details">
-	  By pressing continue you agree to our Terms and Privacy policy.
+	  <div class="form-footer">
+        <div class="form-group">
+          <p>By pressing continue you agree to<br>
+            our <a onclick="signup.fnPolicy();" data-toggle="modal" href="javascript:void(0);">Terms and Privacy policy</a>.</p>
+        </div>
+ <div>
+	  <button class="btn btn-primary btn-lg btn-block" ng-click="submitMyForm(user)" ng-disabled="signupform.$invalid">Continue</button>
 	  </div>
-	  <div>
-	  <button class="button button-block button-calm details" ng-click="submitMyForm(user)" ng-disabled="signupform.$invalid">Continue</button>
-	  </div>
+      </div>
+	 
  
 	  </form> 
+	  </section>
+	  
 	  </div>
 	  
 	  <div class="" ng-show="facebooksignup" ng-hide="facebooksigin">  
@@ -158,8 +181,9 @@
 	  <label>
 	  <ion-toggle ng-model="textsavings" toggle-class="toggle-calm">Sign up for text message savings and updates</ion-toggle>
 	  </label>
-	  <label class="item item-input">Mobile
-		<div><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"><input style="border: 1px solid;width:25%;float:left;" type="number" ng-model="telephone"></div>
+	  <label class="item item-input">
+	  	<div class="mobile-label"> Mobile </div>
+		<div class="mobile-input"><input class="mobile-input-bx" type="number" ng-model="telephone"><input class="mobile-input-bx" type="number" ng-model="telephone"><input class="mobile-input-bx" type="number" ng-model="telephone"></div>
 	  </label>
 	  </div>
 	  <div  class="details">
